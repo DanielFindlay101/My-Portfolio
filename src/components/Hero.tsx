@@ -1,8 +1,16 @@
 import Pic from "../assets/images/portfolioPic.jpg";
 
-export default function Hero() {
+interface HeroProps {
+  openSideBar: boolean;
+}
+
+export default function Hero({ openSideBar }: HeroProps) {
   return (
-    <div className="bg-primary h-screen flex justify-center items-center px-[50px]">
+    <div
+      className={`h-screen  ${
+        openSideBar ? "bg-primary/90" : "bg-primary"
+      }  h-screen flex justify-center items-center px-[50px]`}
+    >
       <div className="flex flex-col gap-5 md:flex-row-reverse lg:gap-10 h-1/2 px-[10px] justify-center items-center">
         <img
           src={Pic}
