@@ -7,7 +7,11 @@ interface NavBarProps {
 
 export default function NavBar({ openSideBar, setOpenSideBar }: NavBarProps) {
   return (
-    <nav className="bg-primary w-full h-[50px] text-white fixed p-3 flex items-center justify-between">
+    <nav
+      className={` ${
+        openSideBar ? "bg-primary/90" : "bg-primary"
+      } w-full h-[50px] text-white fixed p-3 flex items-center justify-between`}
+    >
       <Bars3Icon
         className="block sm:hidden w-7"
         onClick={() => setOpenSideBar(!openSideBar)}
