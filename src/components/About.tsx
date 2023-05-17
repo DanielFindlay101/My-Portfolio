@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div>
+    <div className="w-full bg-red px-12 pt-4">
       <h1>
         A self-taught junior developer with 1 year's commercial experience
       </h1>

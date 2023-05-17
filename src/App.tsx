@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 
 import { useState } from "react";
+import Stack from "./components/Stack";
+import About from "./components/About";
 
 function App() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -14,6 +16,7 @@ function App() {
       {openSideBar && (
         <SideBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
       )}
+      <About />
     </>
   );
 }

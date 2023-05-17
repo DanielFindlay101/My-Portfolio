@@ -7,7 +7,7 @@ interface SideBarProps {
 
 export default function SideBar({ openSideBar, setOpenSideBar }: SideBarProps) {
   return (
-    <div className="h-full w-1/2 bg-slate absolute top-0 rounded-tr-3xl">
+    <div className="h-full w-1/2 bg-slate fixed top-0 rounded-tr-3xl">
       <ChevronLeftIcon
         className="w-8 absolute top-0 right-2 pt-2"
         onClick={() => setOpenSideBar(!openSideBar)}
