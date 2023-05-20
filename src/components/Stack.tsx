@@ -4,7 +4,7 @@ import TWLogo from "../assets/images/tailwind.png";
 
 export default function Stack() {
   return (
-    <div className="flex gap-6 items-center mt-4 md:w-1/2 md:mt-20 ">
+    <div className="flex gap-6 items-center mt-4 md:w-1/2 md:mt-20">
       <h1 className="text-white">Tech Stack |</h1>
       <div className="flex gap-6 [&>*]:w-8">
         <img src={ReactLogo} alt="react-logo" className="color-white" />

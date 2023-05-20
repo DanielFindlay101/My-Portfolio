@@ -1,10 +1,9 @@
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
-
-import { useState } from "react";
-import Stack from "./components/Stack";
 import About from "./components/About";
+import { useState } from "react";
+import Projects from "./components/Projects";
 
 function App() {
   const [openSideBar, setOpenSideBar] = useState(false);
@@ -17,6 +16,7 @@ function App() {
         <SideBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
       )}
       <About />
+      <Projects />
     </>
   );
 }

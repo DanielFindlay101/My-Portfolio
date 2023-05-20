@@ -1,7 +1,6 @@
 import Pic from "../assets/images/portfolioPic.jpg";
 import Linkedin from "../assets/images/linkedin.webp";
 import Github from "../assets/images/GitHub.png";
-import Stack from "./Stack";
 
 interface HeroProps {
   openSideBar: boolean;
@@ -10,6 +9,7 @@ interface HeroProps {
 export default function Hero({ openSideBar }: HeroProps) {
   return (
     <div
+      id="home"
       className={`h-screen  ${
         openSideBar ? "bg-primary/90" : "bg-primary"
       }  h-screen flex flex-col justify-center items-center px-[50px]`}
