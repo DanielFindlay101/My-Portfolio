@@ -10,7 +10,7 @@ export default function About() {
       <div
         className="p-2 grid grid-cols-1 justify-items-center gap-2
                          md:grid-cols-2 md:w-3/4
-                         xl:w-1/2         "
+                         xl:w-1/2"
       >
         <img
           src={Notebook}

@@ -1,12 +1,16 @@
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { Link } from "react-scroll";
-
 interface NavBarProps {
   openSideBar: boolean;
   setOpenSideBar: (openSideBar: boolean) => void;
+  setShowModal: (val: boolean) => void;
 }
 
-export default function NavBar({ openSideBar, setOpenSideBar }: NavBarProps) {
+export default function NavBar({
+  openSideBar,
+  setOpenSideBar,
+  setShowModal,
+}: NavBarProps) {
   return (
     <nav
       id="/"
@@ -18,16 +22,43 @@ export default function NavBar({ openSideBar, setOpenSideBar }: NavBarProps) {
         className="block sm:hidden w-7"
         onClick={() => setOpenSideBar(!openSideBar)}
       />
-      <h1 className="hidden sm:block">Daniel.dev</h1>
+      <h1
+        onClick={() => setShowModal(true)}
+        className="hidden sm:block hover:cursor-pointer"
+      >
+        Daniel.dev
+      </h1>
       <ul className="hidden sm:flex justify-between w-[300px] cursor-pointer">
         <Link to="home" smooth={true} offset={50} duration={500}>
-          <li>Home</li>
+          <li className="hover:bg-slate/10 rounded-sm">Home</li>
         </Link>
-        <Link to="about" smooth={true} offset={50} duration={500}>
+        <Link
+          className="hover:bg-slate/10 rounded-sm"
+          to="about"
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
           <li>About</li>
         </Link>
-        <li>Projects</li>
-        <li>Contact</li>
+        <Link
+          className="hover:bg-slate/10 rounded-sm"
+          to="projects"
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          <li>Projects</li>
+        </Link>
+        <Link
+          className="hover:bg-slate/10 rounded-sm"
+          to="contact"
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          <li>Contact</li>
+        </Link>
       </ul>
     </nav>
   );

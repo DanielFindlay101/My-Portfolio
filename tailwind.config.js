@@ -8,6 +8,7 @@ export default {
     colors: {
       primary: '#282A40',
       white: '#ffffff',
+      black: '000000',
       secondary: '#B9B6B6',
       myrtle: '#307473',
       flame: '#E4572E',
