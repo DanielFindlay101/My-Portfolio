@@ -1,14 +1,29 @@
 import ProjectCard from "./ProjectCard";
+import Pokedex from "../assets/images/Pokedex.jpg";
 
 export default function Projects() {
   return (
     <div
       id="projects"
-      className="bg-primary w-full flex flex-col gap-10 justify-center items-center pt-10 py-10"
+      className="flex w-full flex-col items-center justify-center gap-10 bg-primary py-10 pt-10"
     >
-      <h1 className="text-white text-xl">Projects</h1>
-      <ProjectCard />
-      <ProjectCard />
+      <h1 className="text-xl text-white">Projects</h1>
+      <ProjectCard
+        img={Pokedex}
+        title="Pokedex"
+        description="Select a Pokemon and build your collection of favourties"
+        technologies="React Typescript TailwindCSS"
+        link="https://pokedex-sable-sigma.vercel.app/"
+        code="https://github.com/DanielFindlay101/Pokedex/tree/main/my-pokedex"
+      />
+      <ProjectCard
+        img={Pokedex}
+        title="Pokedex"
+        description="Select a Pokemon and build your collection of favourties"
+        technologies="React Typescript TailwindCSS"
+        link="https://pokedex-sable-sigma.vercel.app/"
+        code="https://github.com/DanielFindlay101/Pokedex/tree/main/my-pokedex"
+      />
     </div>
   );
 }
